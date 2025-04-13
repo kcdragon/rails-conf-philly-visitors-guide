@@ -1,0 +1,244 @@
+places:
+  - name: Middle Child
+    description: Hip sandwich shop known for creative deli classics and breakfast items
+    tags: ["sandwiches", "breakfast", "deli", "casual"]
+  - name: Zahav
+    description: Award-winning Israeli restaurant featuring modern takes on traditional dishes
+    tags: ["israeli", "middle eastern", "upscale", "small plates"]
+  - name: Reading Terminal Market
+    description: Historic food hall featuring diverse vendors and local specialties
+    tags: ["food hall", "american", "multicultural", "casual"]
+  - name: Pat's King of Steaks
+    description: Iconic cheesesteak shop open 24/7
+    tags: ["cheesesteaks", "american", "fast food", "casual"]
+  - name: Vedge
+    description: Upscale vegan restaurant in a historic mansion
+    tags: ["vegan", "fine dining", "vegetarian", "upscale"]
+  - name: Dim Sum Garden
+    description: Popular spot for Shanghai-style dumplings and noodles
+    tags: ["chinese", "dim sum", "casual", "asian"]
+  - name: Suraya
+    description: All-day Lebanese cafe, restaurant and market
+    tags: ["lebanese", "middle eastern", "cafe", "market"]
+  - name: South Philly Barbacoa
+    description: Acclaimed Mexican restaurant known for traditional barbacoa
+    tags: ["mexican", "barbacoa", "casual", "authentic"]
+  - name: Vernick Food & Drink
+    description: New American restaurant with wood-fired fare
+    tags: ["new american", "fine dining", "upscale", "seasonal"]
+  - name: Federal Donuts
+    description: Popular chain known for donuts and fried chicken
+    tags: ["donuts", "fried chicken", "casual", "breakfast"]
+  - name: Parc
+    description: French bistro overlooking Rittenhouse Square
+    tags: ["french", "bistro", "brunch", "outdoor seating"]
+  - name: Han Dynasty
+    description: Szechuan Chinese restaurant chain known for spicy dishes
+    tags: ["chinese", "szechuan", "spicy", "casual"]
+  - name: Pizzeria Beddia
+    description: Acclaimed pizzeria with creative toppings
+    tags: ["pizza", "italian", "casual", "modern"]
+  - name: Morimoto
+    description: High-end Japanese restaurant from Iron Chef Morimoto
+    tags: ["japanese", "sushi", "fine dining", "asian fusion"]
+  - name: John's Roast Pork
+    description: Classic sandwich shop known for roast pork and cheesesteaks
+    tags: ["sandwiches", "roast pork", "cheesesteaks", "casual"]
+  - name: Talula's Garden
+    description: Farm-to-table American restaurant with beautiful garden seating
+    tags: ["american", "farm to table", "outdoor dining", "upscale"]
+  - name: El Vez
+    description: Modern Mexican restaurant with vibrant atmosphere
+    tags: ["mexican", "modern", "cocktails", "lively"]
+  - name: Amada
+    description: Spanish tapas restaurant from Jose Garces
+    tags: ["spanish", "tapas", "wine", "upscale"]
+  - name: Nan Zhou Hand Drawn Noodle House
+    description: Popular spot for hand-pulled noodles and dumplings
+    tags: ["chinese", "noodles", "casual", "authentic"]
+  - name: Abe Fisher
+    description: Modern Jewish cuisine with creative interpretations
+    tags: ["jewish", "modern", "small plates", "upscale"]
+  - name: Vietnam Restaurant
+    description: Long-running Vietnamese restaurant in Chinatown
+    tags: ["vietnamese", "asian", "casual", "pho"]
+  - name: Barbuzzo
+    description: Mediterranean kitchen and bar with creative small plates
+    tags: ["mediterranean", "small plates", "wine bar", "casual upscale"]
+  - name: Double Knot
+    description: Coffee shop above, underground izakaya below
+    tags: ["japanese", "coffee", "sushi", "izakaya"]
+  - name: Hardena
+    description: No-frills Indonesian restaurant serving traditional fare
+    tags: ["indonesian", "casual", "authentic", "asian"]
+  - name: Kalaya
+    description: Critically acclaimed Thai BYOB
+    tags: ["thai", "byob", "authentic", "upscale casual"]
+  - name: Laser Wolf
+    description: Israeli skewer house from the Zahav team
+    tags: ["israeli", "grilled meats", "middle eastern", "casual upscale"]
+  - name: Laurel
+    description: Intimate French-American tasting menu restaurant
+    tags: ["french", "american", "fine dining", "tasting menu"]
+  - name: Le Virtu
+    description: Traditional Abruzzese Italian cuisine
+    tags: ["italian", "authentic", "pasta", "upscale"]
+  - name: Palizzi Social Club
+    description: Members-only Italian American social club turned restaurant
+    tags: ["italian american", "exclusive", "traditional", "upscale"]
+  - name: Rangoon
+    description: Longstanding Burmese restaurant
+    tags: ["burmese", "asian", "casual", "authentic"]
+  - name: Royal Sushi & Izakaya
+    description: Late-night Japanese pub with exclusive omakase
+    tags: ["japanese", "sushi", "izakaya", "omakase"]
+  - name: Sampan
+    description: Modern Asian small plates and creative cocktails
+    tags: ["asian fusion", "small plates", "cocktails", "trendy"]
+  - name: Stina Pizzeria
+    description: Mediterranean BYO with wood-fired pizza
+    tags: ["mediterranean", "pizza", "byob", "casual"]
+  - name: Stock
+    description: Southeast Asian soup and noodle shop
+    tags: ["asian", "soup", "noodles", "casual"]
+  - name: Tuna Bar
+    description: Sleek Japanese raw bar and restaurant
+    tags: ["japanese", "sushi", "seafood", "upscale"]
+  - name: Vetri Cucina
+    description: Acclaimed Italian tasting menu restaurant
+    tags: ["italian", "fine dining", "tasting menu", "upscale"]
+  - name: Victor Cafe
+    description: Italian restaurant where servers perform opera
+    tags: ["italian", "entertainment", "traditional", "unique"]
+  - name: Wm. Mulherin's Sons
+    description: Wood-fired Italian in restored whiskey blending facility
+    tags: ["italian", "pizza", "pasta", "trendy"]
+  - name: Zeppoli
+    description: Intimate Sicilian BYOB
+    tags: ["italian", "sicilian", "byob", "intimate"]
+  - name: A Mano
+    description: Seasonal Italian BYOB with handmade pasta
+    tags: ["italian", "pasta", "byob", "seasonal"]
+  - name: Alma del Mar
+    description: Mexican seafood restaurant inspired by Veracruz
+    tags: ["mexican", "seafood", "casual", "authentic"]
+  - name: Angelo's Pizzeria
+    description: Popular shop for pizza, cheesesteaks and hoagies
+    tags: ["pizza", "sandwiches", "italian", "casual"]
+  - name: Bibou
+    description: Classic French BYOB
+    tags: ["french", "byob", "fine dining", "intimate"]
+  - name: Cafe La Maude
+    description: French-Lebanese brunch cafe
+    tags: ["french", "lebanese", "brunch", "cafe"]
+  - name: Cheu Noodle Bar
+    description: Asian fusion noodle shop with creative takes
+    tags: ["asian fusion", "noodles", "casual", "creative"]
+  - name: Cry Baby Pasta
+    description: Neighborhood Italian restaurant and wine bar
+    tags: ["italian", "pasta", "wine bar", "casual"]
+  - name: DanDan
+    description: Szechuan and Taiwanese restaurant
+    tags: ["chinese", "szechuan", "taiwanese", "casual upscale"]
+  - name: El Merkury
+    description: Central American street food and churros
+    tags: ["central american", "street food", "casual", "desserts"]
+  - name: Fiore Fine Foods
+    description: All-day Italian cafe and restaurant
+    tags: ["italian", "cafe", "pastries", "casual"]
+  - name: Friday Saturday Sunday
+    description: New American tasting menu restaurant
+    tags: ["american", "tasting menu", "cocktails", "upscale"]
+  - name: Gabriella's Vietnam
+    description: Modern Vietnamese restaurant
+    tags: ["vietnamese", "modern", "casual upscale", "asian"]
+  - name: High Street Philly
+    description: Bakery and restaurant known for artisanal breads
+    tags: ["bakery", "american", "sandwiches", "casual"]
+  - name: Irwin's
+    description: Sicilian restaurant with rooftop views
+    tags: ["italian", "sicilian", "views", "upscale casual"]
+  - name: Jezabel's
+    description: Argentine cafe and cooking school
+    tags: ["argentine", "cafe", "pastries", "casual"]
+  - name: K'Far
+    description: Israeli bakery and all-day cafe
+    tags: ["israeli", "bakery", "cafe", "casual"]
+  - name: La Chinesca
+    description: Chinese-Mexican fusion restaurant
+    tags: ["chinese", "mexican", "fusion", "casual upscale"]
+  - name: Little Fish
+    description: Intimate BYOB seafood restaurant
+    tags: ["seafood", "byob", "intimate", "upscale"]
+  - name: Mish Mish
+    description: Middle Eastern all-day cafe
+    tags: ["middle eastern", "cafe", "vegetarian friendly", "casual"]
+  - name: Nam Phuong
+    description: Vietnamese restaurant known for pho
+    tags: ["vietnamese", "pho", "casual", "authentic"]
+  - name: Oyster House
+    description: Historic seafood restaurant and raw bar
+    tags: ["seafood", "american", "raw bar", "traditional"]
+  - name: Perla
+    description: Modern Filipino BYOB
+    tags: ["filipino", "byob", "modern", "casual upscale"]
+  - name: Prunella
+    description: Italian restaurant specializing in pasta and pizza
+    tags: ["italian", "pasta", "pizza", "casual upscale"]
+  - name: River Twice
+    description: Modern American tasting menu restaurant
+    tags: ["american", "tasting menu", "seasonal", "upscale"]
+  - name: Saami Somi
+    description: Georgian bread bakery and cafe
+    tags: ["georgian", "bakery", "cafe", "casual"]
+  - name: Sophie's Kitchen
+    description: Authentic Cambodian restaurant
+    tags: ["cambodian", "asian", "casual", "authentic"]
+  - name: Terakawa Ramen
+    description: Popular ramen shop
+    tags: ["japanese", "ramen", "casual", "noodles"]
+  - name: The Wayward
+    description: American brasserie with focus on seafood
+    tags: ["american", "seafood", "brasserie", "upscale casual"]
+  - name: Umai Umai
+    description: Creative BYOB sushi restaurant
+    tags: ["japanese", "sushi", "byob", "creative"]
+  - name: Villa di Roma
+    description: Old-school Italian American restaurant
+    tags: ["italian american", "traditional", "casual", "red sauce"]
+  - name: White Yak
+    description: Tibetan restaurant with traditional dishes
+    tags: ["tibetan", "asian", "casual", "authentic"]
+  - name: Xochitl
+    description: Modern Mexican restaurant and tequila bar
+    tags: ["mexican", "tequila", "modern", "upscale casual"]
+  - name: Yanaga
+    description: Contemporary Japanese restaurant
+    tags: ["japanese", "sushi", "contemporary", "upscale"]
+  - name: Zama
+    description: Upscale sushi and Japanese cuisine
+    tags: ["japanese", "sushi", "upscale", "asian"]
+  - name: Zorba's Tavern
+    description: Traditional Greek restaurant and bar
+    tags: ["greek", "mediterranean", "traditional", "casual"]
+  - name: 1234 Locust
+    description: Modern Asian fusion restaurant
+    tags: ["asian fusion", "modern", "cocktails", "trendy"]
+  - name: 20 Manning
+    description: New American bistro with courtyard
+    tags: ["american", "bistro", "outdoor dining", "casual upscale"]
+  - name: 48th Street Grille
+    description: Caribbean American fusion restaurant
+    tags: ["caribbean", "american", "fusion", "casual"]
+  - name: 786 Halal Cart
+    description: Popular halal food cart with multiple locations
+    tags: ["halal", "middle eastern", "street food", "casual"]
+  - name: A La Mousse
+    description: French-Asian fusion dessert cafe
+    tags: ["desserts", "french", "asian fusion", "cafe"]
+  - name: Abyssinia
+    description: Ethiopian restaurant with traditional dishes
+    tags: ["ethiopian", "african", "vegetarian friendly", "casual"]
+  - name: Aki Nom Nom
+    description: Sushi and ramen restaurant
+    tags: ["japanese", "sushi", "ramen", "casual"]
