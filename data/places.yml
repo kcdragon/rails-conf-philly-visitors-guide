@@ -1,244 +1,244 @@
 places:
   - name: Middle Child
     description: Hip sandwich shop known for creative deli classics and breakfast items
-    tags: ["sandwiches", "breakfast"]
+    tags: ["sandwiches", "breakfast", "lunch"]
   - name: Zahav
     description: Award-winning Israeli restaurant featuring modern takes on traditional dishes
-    tags: ["israeli", "upscale"]
+    tags: ["israeli", "upscale", "dinner"]
   - name: Reading Terminal Market
     description: Historic food hall featuring diverse vendors and local specialties
-    tags: ["food hall", "multicultural"]
+    tags: ["food hall", "multicultural", "breakfast", "lunch"]
   - name: Pat's King of Steaks
     description: Iconic cheesesteak shop open 24/7
-    tags: ["cheesesteaks", "american"]
+    tags: ["cheesesteaks", "american", "lunch", "dinner"]
   - name: Vedge
     description: Upscale vegan restaurant in a historic mansion
-    tags: ["vegan", "upscale"]
+    tags: ["vegan", "upscale", "dinner"]
   - name: Dim Sum Garden
     description: Popular spot for Shanghai-style dumplings and noodles
-    tags: ["chinese", "dim sum"]
+    tags: ["chinese", "dim sum", "lunch", "dinner"]
   - name: Suraya
     description: All-day Lebanese cafe, restaurant and market
-    tags: ["lebanese", "cafe"]
+    tags: ["lebanese", "cafe", "breakfast", "lunch", "dinner"]
   - name: South Philly Barbacoa
     description: Acclaimed Mexican restaurant known for traditional barbacoa
-    tags: ["mexican", "authentic"]
+    tags: ["mexican", "authentic", "lunch", "dinner"]
   - name: Vernick Food & Drink
     description: New American restaurant with wood-fired fare
-    tags: ["new american", "upscale"]
+    tags: ["new american", "upscale", "dinner"]
   - name: Federal Donuts
     description: Popular chain known for donuts and fried chicken
-    tags: ["donuts", "fried chicken"]
+    tags: ["donuts", "fried chicken", "breakfast", "lunch"]
   - name: Parc
     description: French bistro overlooking Rittenhouse Square
-    tags: ["french", "bistro"]
+    tags: ["french", "bistro", "breakfast", "lunch", "dinner"]
   - name: Han Dynasty
     description: Szechuan Chinese restaurant chain known for spicy dishes
-    tags: ["chinese", "szechuan"]
+    tags: ["chinese", "szechuan", "lunch", "dinner"]
   - name: Pizzeria Beddia
     description: Acclaimed pizzeria with creative toppings
-    tags: ["pizza", "modern"]
+    tags: ["pizza", "modern", "dinner"]
   - name: Morimoto
     description: High-end Japanese restaurant from Iron Chef Morimoto
-    tags: ["japanese", "upscale"]
+    tags: ["japanese", "upscale", "dinner"]
   - name: John's Roast Pork
     description: Classic sandwich shop known for roast pork and cheesesteaks
-    tags: ["sandwiches", "cheesesteaks"]
+    tags: ["sandwiches", "cheesesteaks", "lunch"]
   - name: Talula's Garden
     description: Farm-to-table American restaurant with beautiful garden seating
-    tags: ["american", "outdoor dining"]
+    tags: ["american", "outdoor dining", "dinner"]
   - name: El Vez
     description: Modern Mexican restaurant with vibrant atmosphere
-    tags: ["mexican", "modern"]
+    tags: ["mexican", "modern", "lunch", "dinner"]
   - name: Amada
     description: Spanish tapas restaurant from Jose Garces
-    tags: ["spanish", "tapas"]
+    tags: ["spanish", "tapas", "dinner"]
   - name: Nan Zhou Hand Drawn Noodle House
     description: Popular spot for hand-pulled noodles and dumplings
-    tags: ["chinese", "noodles"]
+    tags: ["chinese", "noodles", "lunch", "dinner"]
   - name: Abe Fisher
     description: Modern Jewish cuisine with creative interpretations
-    tags: ["jewish", "modern"]
+    tags: ["jewish", "modern", "dinner"]
   - name: Vietnam Restaurant
     description: Long-running Vietnamese restaurant in Chinatown
-    tags: ["vietnamese", "pho"]
+    tags: ["vietnamese", "pho", "lunch", "dinner"]
   - name: Barbuzzo
     description: Mediterranean kitchen and bar with creative small plates
-    tags: ["mediterranean", "small plates"]
+    tags: ["mediterranean", "small plates", "lunch", "dinner"]
   - name: Double Knot
     description: Coffee shop above, underground izakaya below
-    tags: ["japanese", "coffee"]
+    tags: ["japanese", "coffee", "breakfast", "lunch", "dinner"]
   - name: Hardena
     description: No-frills Indonesian restaurant serving traditional fare
-    tags: ["indonesian", "authentic"]
+    tags: ["indonesian", "authentic", "lunch", "dinner"]
   - name: Kalaya
     description: Critically acclaimed Thai BYOB
-    tags: ["thai", "byob"]
+    tags: ["thai", "byob", "dinner"]
   - name: Laser Wolf
     description: Israeli skewer house from the Zahav team
-    tags: ["israeli", "grilled meats"]
+    tags: ["israeli", "grilled meats", "dinner"]
   - name: Laurel
     description: Intimate French-American tasting menu restaurant
-    tags: ["french", "tasting menu"]
+    tags: ["french", "tasting menu", "dinner"]
   - name: Le Virtu
     description: Traditional Abruzzese Italian cuisine
-    tags: ["italian", "authentic"]
+    tags: ["italian", "authentic", "dinner"]
   - name: Palizzi Social Club
     description: Members-only Italian American social club turned restaurant
-    tags: ["italian american", "exclusive"]
+    tags: ["italian american", "exclusive", "dinner"]
   - name: Rangoon
     description: Longstanding Burmese restaurant
-    tags: ["burmese", "authentic"]
+    tags: ["burmese", "authentic", "lunch", "dinner"]
   - name: Royal Sushi & Izakaya
     description: Late-night Japanese pub with exclusive omakase
-    tags: ["japanese", "izakaya"]
+    tags: ["japanese", "izakaya", "dinner"]
   - name: Sampan
     description: Modern Asian small plates and creative cocktails
-    tags: ["asian fusion", "cocktails"]
+    tags: ["asian fusion", "cocktails", "dinner"]
   - name: Stina Pizzeria
     description: Mediterranean BYO with wood-fired pizza
-    tags: ["mediterranean", "pizza"]
+    tags: ["mediterranean", "pizza", "lunch", "dinner"]
   - name: Stock
     description: Southeast Asian soup and noodle shop
-    tags: ["asian", "noodles"]
+    tags: ["asian", "noodles", "lunch", "dinner"]
   - name: Tuna Bar
     description: Sleek Japanese raw bar and restaurant
-    tags: ["japanese", "sushi"]
+    tags: ["japanese", "sushi", "lunch", "dinner"]
   - name: Vetri Cucina
     description: Acclaimed Italian tasting menu restaurant
-    tags: ["italian", "tasting menu"]
+    tags: ["italian", "tasting menu", "dinner"]
   - name: Victor Cafe
     description: Italian restaurant where servers perform opera
-    tags: ["italian", "entertainment"]
+    tags: ["italian", "entertainment", "dinner"]
   - name: Wm. Mulherin's Sons
     description: Wood-fired Italian in restored whiskey blending facility
-    tags: ["italian", "pizza"]
+    tags: ["italian", "pizza", "dinner"]
   - name: Zeppoli
     description: Intimate Sicilian BYOB
-    tags: ["italian", "byob"]
+    tags: ["italian", "byob", "dinner"]
   - name: A Mano
     description: Seasonal Italian BYOB with handmade pasta
-    tags: ["italian", "pasta"]
+    tags: ["italian", "pasta", "dinner"]
   - name: Alma del Mar
     description: Mexican seafood restaurant inspired by Veracruz
-    tags: ["mexican", "seafood"]
+    tags: ["mexican", "seafood", "lunch", "dinner"]
   - name: Angelo's Pizzeria
     description: Popular shop for pizza, cheesesteaks and hoagies
-    tags: ["pizza", "sandwiches"]
+    tags: ["pizza", "sandwiches", "lunch", "dinner"]
   - name: Bibou
     description: Classic French BYOB
-    tags: ["french", "byob"]
+    tags: ["french", "byob", "dinner"]
   - name: Cafe La Maude
     description: French-Lebanese brunch cafe
-    tags: ["french", "lebanese"]
+    tags: ["french", "lebanese", "breakfast", "lunch"]
   - name: Cheu Noodle Bar
     description: Asian fusion noodle shop with creative takes
-    tags: ["asian fusion", "noodles"]
+    tags: ["asian fusion", "noodles", "lunch", "dinner"]
   - name: Cry Baby Pasta
     description: Neighborhood Italian restaurant and wine bar
-    tags: ["italian", "wine bar"]
+    tags: ["italian", "wine bar", "dinner"]
   - name: DanDan
     description: Szechuan and Taiwanese restaurant
-    tags: ["chinese", "taiwanese"]
+    tags: ["chinese", "taiwanese", "lunch", "dinner"]
   - name: El Merkury
     description: Central American street food and churros
-    tags: ["central american", "street food"]
+    tags: ["central american", "street food", "lunch", "dinner"]
   - name: Fiore Fine Foods
     description: All-day Italian cafe and restaurant
-    tags: ["italian", "cafe"]
+    tags: ["italian", "cafe", "breakfast", "lunch", "dinner"]
   - name: Friday Saturday Sunday
     description: New American tasting menu restaurant
-    tags: ["american", "tasting menu"]
+    tags: ["american", "tasting menu", "dinner"]
   - name: Gabriella's Vietnam
     description: Modern Vietnamese restaurant
-    tags: ["vietnamese", "modern"]
+    tags: ["vietnamese", "modern", "lunch", "dinner"]
   - name: High Street Philly
     description: Bakery and restaurant known for artisanal breads
-    tags: ["bakery", "sandwiches"]
+    tags: ["bakery", "sandwiches", "breakfast", "lunch"]
   - name: Irwin's
     description: Sicilian restaurant with rooftop views
-    tags: ["italian", "views"]
+    tags: ["italian", "views", "dinner"]
   - name: Jezabel's
     description: Argentine cafe and cooking school
-    tags: ["argentine", "cafe"]
+    tags: ["argentine", "cafe", "breakfast", "lunch"]
   - name: K'Far
     description: Israeli bakery and all-day cafe
-    tags: ["israeli", "bakery"]
+    tags: ["israeli", "bakery", "breakfast", "lunch"]
   - name: La Chinesca
     description: Chinese-Mexican fusion restaurant
-    tags: ["chinese", "mexican"]
+    tags: ["chinese", "mexican", "dinner"]
   - name: Little Fish
     description: Intimate BYOB seafood restaurant
-    tags: ["seafood", "byob"]
+    tags: ["seafood", "byob", "dinner"]
   - name: Mish Mish
     description: Middle Eastern all-day cafe
-    tags: ["middle eastern", "cafe"]
+    tags: ["middle eastern", "cafe", "breakfast", "lunch"]
   - name: Nam Phuong
     description: Vietnamese restaurant known for pho
-    tags: ["vietnamese", "pho"]
+    tags: ["vietnamese", "pho", "lunch", "dinner"]
   - name: Oyster House
     description: Historic seafood restaurant and raw bar
-    tags: ["seafood", "raw bar"]
+    tags: ["seafood", "raw bar", "lunch", "dinner"]
   - name: Perla
     description: Modern Filipino BYOB
-    tags: ["filipino", "byob"]
+    tags: ["filipino", "byob", "dinner"]
   - name: Prunella
     description: Italian restaurant specializing in pasta and pizza
-    tags: ["italian", "pasta"]
+    tags: ["italian", "pasta", "lunch", "dinner"]
   - name: River Twice
     description: Modern American tasting menu restaurant
-    tags: ["american", "tasting menu"]
+    tags: ["american", "tasting menu", "dinner"]
   - name: Saami Somi
     description: Georgian bread bakery and cafe
-    tags: ["georgian", "bakery"]
+    tags: ["georgian", "bakery", "breakfast", "lunch"]
   - name: Sophie's Kitchen
     description: Authentic Cambodian restaurant
-    tags: ["cambodian", "authentic"]
+    tags: ["cambodian", "authentic", "lunch", "dinner"]
   - name: Terakawa Ramen
     description: Popular ramen shop
-    tags: ["japanese", "ramen"]
+    tags: ["japanese", "ramen", "lunch", "dinner"]
   - name: The Wayward
     description: American brasserie with focus on seafood
-    tags: ["american", "seafood"]
+    tags: ["american", "seafood", "dinner"]
   - name: Umai Umai
     description: Creative BYOB sushi restaurant
-    tags: ["japanese", "byob"]
+    tags: ["japanese", "byob", "dinner"]
   - name: Villa di Roma
     description: Old-school Italian American restaurant
-    tags: ["italian american", "traditional"]
+    tags: ["italian american", "traditional", "lunch", "dinner"]
   - name: White Yak
     description: Tibetan restaurant with traditional dishes
-    tags: ["tibetan", "authentic"]
+    tags: ["tibetan", "authentic", "lunch", "dinner"]
   - name: Xochitl
     description: Modern Mexican restaurant and tequila bar
-    tags: ["mexican", "tequila"]
+    tags: ["mexican", "tequila", "dinner"]
   - name: Yanaga
     description: Contemporary Japanese restaurant
-    tags: ["japanese", "contemporary"]
+    tags: ["japanese", "contemporary", "dinner"]
   - name: Zama
     description: Upscale sushi and Japanese cuisine
-    tags: ["japanese", "sushi"]
+    tags: ["japanese", "sushi", "lunch", "dinner"]
   - name: Zorba's Tavern
     description: Traditional Greek restaurant and bar
-    tags: ["greek", "traditional"]
+    tags: ["greek", "traditional", "lunch", "dinner"]
   - name: 1234 Locust
     description: Modern Asian fusion restaurant
-    tags: ["asian fusion", "modern"]
+    tags: ["asian fusion", "modern", "dinner"]
   - name: 20 Manning
     description: New American bistro with courtyard
-    tags: ["american", "outdoor dining"]
+    tags: ["american", "outdoor dining", "dinner"]
   - name: 48th Street Grille
     description: Caribbean American fusion restaurant
-    tags: ["caribbean", "fusion"]
+    tags: ["caribbean", "fusion", "lunch", "dinner"]
   - name: 786 Halal Cart
     description: Popular halal food cart with multiple locations
-    tags: ["halal", "street food"]
+    tags: ["halal", "street food", "lunch", "dinner"]
   - name: A La Mousse
     description: French-Asian fusion dessert cafe
-    tags: ["desserts", "fusion"]
+    tags: ["desserts", "fusion", "lunch", "dinner"]
   - name: Abyssinia
     description: Ethiopian restaurant with traditional dishes
-    tags: ["ethiopian", "authentic"]
+    tags: ["ethiopian", "authentic", "lunch", "dinner"]
   - name: Aki Nom Nom
     description: Sushi and ramen restaurant
-    tags: ["japanese", "sushi"]
+    tags: ["japanese", "sushi", "lunch", "dinner"]
