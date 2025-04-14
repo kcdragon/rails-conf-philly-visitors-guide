@@ -1,13 +1,6 @@
-class Place
-  include ActiveModel::API
+class Place < ApplicationRecord
+  has_many :place_tags, dependent: :destroy
+  has_many :tags, through: :place_tags
 
-  attr_accessor :name, :description, :tags
-
-  validates_presence_of :name
-
-  def self.all
-    YAML.load_file(Rails.root.join("data", "places.yml"))["places"].map do |place|
-      Place.new(place)
-    end
-  end
+  validates_presence_of :name, :slug
 end
