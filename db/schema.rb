@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_04_14_022655) do
+ActiveRecord::Schema[8.0].define(version: 2025_04_14_061431) do
   create_table "place_tags", force: :cascade do |t|
     t.integer "place_id", null: false
     t.integer "tag_id", null: false
@@ -26,6 +26,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_14_022655) do
     t.string "slug"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "address"
+    t.integer "walking_time_in_seconds"
   end
 
   create_table "tags", force: :cascade do |t|

@@ -1,8 +1,18 @@
 places:
   - name: Middle Child
+    address: 248 S 11th St, Philadelphia, PA 19107
     description: Hip sandwich shop known for creative deli classics and breakfast items
     tags: ["sandwiches", "breakfast", "lunch"]
     slug: middle-child
+  - name: The Dandelion
+    address: 120 S 13th St, Philadelphia, PA 19107
+    description: Upscale American brasserie with a focus on seafood
+    tags: ["american", "seafood", "dinner"]
+    slug: the-dandelion
+  - name: Middle Child Clubhouse
+    description: "The Middle Child's sister restaurant, serving up a mix of sandwiches, salads, and desserts."
+    tags: ["dinner", "lunch"]
+    slug: middle-child-clubhouse
   - name: Zahav
     slug: zahav
     description: Award-winning Israeli restaurant featuring modern takes on traditional dishes

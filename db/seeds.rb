@@ -13,6 +13,7 @@ YAML.load_file(Rails.root.join("data", "places.yml"))["places"].map do |place_ya
   place = Place.find_or_initialize_by(slug: slug)
   place.name = place_yaml['name']
   place.description = place_yaml['description']
+  place.address = place_yaml['address']
   place.save!
 
   tag_names = place_yaml['tags']

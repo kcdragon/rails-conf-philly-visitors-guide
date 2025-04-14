@@ -22,6 +22,17 @@
           <% end %>
         </div>
 
+        <div class="flex items-center gap-2 mb-8">
+          <% if @place.walking_time_in_seconds.present? %>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M13 5.5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zM7.525 8.646a6.5 6.5 0 00-1.525 4.104v2.25h8v-2.25a6.5 6.5 0 00-1.525-4.104l-1.475 1.475V12h-2V10.12L7.525 8.646zM10 18a1 1 0 01-1-1h2a1 1 0 01-1 1z" />
+            </svg>
+            <span class="text-gray-600">
+              <%= (@place.walking_time_in_seconds / 60.0).ceil %> minute walk from <%= Venue.name %>
+            </span>
+          <% end %>
+        </div>
+
         <div class="aspect-w-16 aspect-h-9 mb-8">
           <iframe
             width="100%"
@@ -29,7 +40,7 @@
             style="border:0"
             loading="lazy"
             allowfullscreen
-            src="https://www.google.com/maps/embed/v1/place?key=<%= Rails.application.credentials.dig(:google, :maps, :embed, :api_key) %>&q=<%= @place.name %>+Philadelphia+PA">
+            src="https://www.google.com/maps/embed/v1/place?key=<%= Rails.application.credentials.dig(:google, :maps, :embed, :api_key) %>&q=<%= @place.google_maps_address %>">
           </iframe>
         </div>
       </div>
