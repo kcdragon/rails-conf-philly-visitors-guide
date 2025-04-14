@@ -7,9 +7,18 @@
       <%= link_to places_path, class: "px-4 py-2 rounded-full text-sm font-medium #{@selected_tag.nil? ? 'bg-indigo-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}", data: { turbo_frame: "places_grid", turbo_action: "advance" } do %>
         All (<%= Place.all.count %>)
       <% end %>
-      <% @all_tags.each do |tag| %>
-        <%= link_to places_path(tag: tag), class: "px-4 py-2 rounded-full text-sm font-medium #{@selected_tag == tag ? 'bg-indigo-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}", data: { turbo_frame: "places_grid", turbo_action: "advance" } do %>
+      <% @display_tags.each do |tag| %>
+        <%= link_to places_path(tag: tag, show_all_tags: params[:show_all_tags]), class: "px-4 py-2 rounded-full text-sm font-medium #{@selected_tag == tag ? 'bg-indigo-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}", data: { turbo_frame: "places_grid", turbo_action: "advance" } do %>
           <%= tag %> (<%= @tag_counts[tag] %>)
+        <% end %>
+      <% end %>
+      <% if @all_tags.length > @display_tags.length %>
+        <%= link_to places_path(tag: @selected_tag, show_all_tags: true), class: "px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200", data: { turbo_frame: "places_grid", turbo_action: "advance" } do %>
+          Show <%= @all_tags.length - @display_tags.length %> more
+        <% end %>
+      <% else %>
+        <%= link_to places_path(tag: @selected_tag, show_all_tags: false), class: "px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200", data: { turbo_frame: "places_grid", turbo_action: "advance" } do %>
+          Show fewer
         <% end %>
       <% end %>
     </div>
