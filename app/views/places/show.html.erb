@@ -1,7 +1,6 @@
-<div class="container mx-auto px-4 py-12">
   <div class="max-w-4xl mx-auto">
     <div class="mb-8">
-      <%= link_to places_path, class: "text-indigo-600 hover:text-indigo-800 flex items-center gap-2" do %>
+      <%= link_to places_path, class: "text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-300 flex items-center gap-2" do %>
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
           <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
         </svg>
@@ -9,14 +8,14 @@
       <% end %>
     </div>
 
-    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
       <div class="p-8">
-        <h1 class="text-4xl font-bold mb-4 text-gray-800"><%= @place.name %></h1>
-        <p class="text-gray-600 text-lg mb-6"><%= @place.description %></p>
+        <h1 class="text-4xl font-bold mb-4 text-gray-800 dark:text-gray-100"><%= @place.name %></h1>
+        <p class="text-gray-600 dark:text-gray-300 text-lg mb-6"><%= @place.description %></p>
 
         <div class="flex flex-wrap gap-2 mb-8">
           <% @place.tags.each do |tag| %>
-            <span class="px-4 py-1.5 bg-indigo-50 text-indigo-700 rounded-full text-sm font-medium">
+            <span class="px-4 py-1.5 bg-indigo-50 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-200 rounded-full text-sm font-medium">
               <%= tag.name %>
             </span>
           <% end %>
@@ -24,10 +23,10 @@
 
         <div class="flex items-center gap-2 mb-8">
           <% if @place.walking_time_in_seconds.present? %>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" viewBox="0 0 20 20" fill="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600 dark:text-gray-400" viewBox="0 0 20 20" fill="currentColor">
               <path d="M13 5.5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zM7.525 8.646a6.5 6.5 0 00-1.525 4.104v2.25h8v-2.25a6.5 6.5 0 00-1.525-4.104l-1.475 1.475V12h-2V10.12L7.525 8.646zM10 18a1 1 0 01-1-1h2a1 1 0 01-1 1z" />
             </svg>
-            <span class="text-gray-600">
+            <span class="text-gray-600 dark:text-gray-400">
               <%= (@place.walking_time_in_seconds / 60.0).ceil %> minute walk from <%= Venue.name %>
             </span>
           <% end %>

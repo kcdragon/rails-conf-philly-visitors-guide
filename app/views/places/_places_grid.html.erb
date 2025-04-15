@@ -1,14 +1,14 @@
 <div class="container mx-auto px-4 py-12">
-  <h1 class="text-4xl font-bold mb-8 text-gray-800">Philadelphia Restaurants</h1>
+  <h1 class="text-4xl font-bold mb-8 text-gray-800 dark:text-gray-100">Philadelphia Restaurants</h1>
 
   <div class="mb-8">
-    <h2 class="text-xl font-semibold mb-4 text-gray-700">Filter by Walking Distance</h2>
+    <h2 class="text-xl font-semibold mb-4 text-gray-700 dark:text-gray-300">Filter by Walking Distance</h2>
     <div class="flex flex-wrap gap-2">
-      <%= link_to places_path(tag_name: @selected_tag_name, show_all_tags: params[:show_all_tags]), class: "px-4 py-2 rounded-full text-sm font-medium #{@selected_walking_time.nil? ? 'bg-indigo-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}", data: { turbo_frame: "places_grid", turbo_action: "advance" } do %>
+      <%= link_to places_path(tag_name: @selected_tag_name, show_all_tags: params[:show_all_tags]), class: "px-4 py-2 rounded-full text-sm font-medium #{@selected_walking_time.nil? ? 'bg-indigo-600 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'}", data: { turbo_frame: "places_grid", turbo_action: "advance" } do %>
         Any Distance
       <% end %>
       <% ['10', '20', '30'].each do |minutes| %>
-        <%= link_to places_path(tag_name: @selected_tag_name, walking_time: minutes, show_all_tags: params[:show_all_tags]), class: "px-4 py-2 rounded-full text-sm font-medium #{@selected_walking_time == minutes ? 'bg-indigo-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}", data: { turbo_frame: "places_grid", turbo_action: "advance" } do %>
+        <%= link_to places_path(tag_name: @selected_tag_name, walking_time: minutes, show_all_tags: params[:show_all_tags]), class: "px-4 py-2 rounded-full text-sm font-medium #{@selected_walking_time == minutes ? 'bg-indigo-600 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'}", data: { turbo_frame: "places_grid", turbo_action: "advance" } do %>
           Within <%= minutes %> minutes
         <% end %>
       <% end %>
@@ -16,22 +16,22 @@
   </div>
 
   <div class="mb-8">
-    <h2 class="text-xl font-semibold mb-4 text-gray-700">Filter by Tag</h2>
+    <h2 class="text-xl font-semibold mb-4 text-gray-700 dark:text-gray-300">Filter by Tag</h2>
     <div class="flex flex-wrap gap-2">
-      <%= link_to places_path, class: "px-4 py-2 rounded-full text-sm font-medium #{@selected_tag_name.nil? ? 'bg-indigo-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}", data: { turbo_frame: "places_grid", turbo_action: "advance" } do %>
+      <%= link_to places_path, class: "px-4 py-2 rounded-full text-sm font-medium #{@selected_tag_name.nil? ? 'bg-indigo-600 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'}", data: { turbo_frame: "places_grid", turbo_action: "advance" } do %>
         All (<%= Place.all.count %>)
       <% end %>
       <% @display_tags.each do |tag| %>
-        <%= link_to places_path(tag_name: tag.name, selected_walking_time: params[:selected_walking_time], show_all_tags: params[:show_all_tags]), class: "px-4 py-2 rounded-full text-sm font-medium #{@selected_tag_name == tag.name ? 'bg-indigo-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}", data: { turbo_frame: "places_grid", turbo_action: "advance" } do %>
+        <%= link_to places_path(tag_name: tag.name, walking_time: params[:walking_time], show_all_tags: params[:show_all_tags]), class: "px-4 py-2 rounded-full text-sm font-medium #{@selected_tag_name == tag.name ? 'bg-indigo-600 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'}", data: { turbo_frame: "places_grid", turbo_action: "advance" } do %>
           <%= tag.name %> (<%= tag.places_count %>)
         <% end %>
       <% end %>
       <% if @tags.length > @display_tags.length %>
-        <%= link_to places_path(tag_name: @selected_tag_name, selected_walking_time: params[:selected_walking_time], show_all_tags: true), class: "px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200", data: { turbo_frame: "places_grid", turbo_action: "advance" } do %>
+        <%= link_to places_path(tag_name: @selected_tag_name, walking_time: params[:walking_time], show_all_tags: true), class: "px-4 py-2 rounded-full text-sm font-medium bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600", data: { turbo_frame: "places_grid", turbo_action: "advance" } do %>
           Show <%= @tags.length - @display_tags.length %> more
         <% end %>
       <% else %>
-        <%= link_to places_path(tag_name: @selected_tag_name, selected_walking_time: params[:selected_walking_time], show_all_tags: false), class: "px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200", data: { turbo_frame: "places_grid", turbo_action: "advance" } do %>
+        <%= link_to places_path(tag_name: @selected_tag_name, walking_time: params[:walking_time], show_all_tags: false), class: "px-4 py-2 rounded-full text-sm font-medium bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600", data: { turbo_frame: "places_grid", turbo_action: "advance" } do %>
           Show fewer
         <% end %>
       <% end %>
@@ -41,13 +41,13 @@
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     <% @places.each do |place| %>
       <%= link_to place_path(place.id), class: "block h-full", data: { turbo_frame: "_top" } do %>
-        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden h-full">
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden h-full">
           <div class="p-6 flex flex-col h-full">
-            <h2 class="text-2xl font-semibold mb-3 text-gray-800"><%= place.name %></h2>
-            <p class="text-gray-600 mb-6 leading-relaxed flex-grow"><%= place.description %></p>
+            <h2 class="text-2xl font-semibold mb-3 text-gray-800 dark:text-gray-100"><%= place.name %></h2>
+            <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed flex-grow"><%= place.description %></p>
             <div class="flex flex-wrap gap-2">
               <% place.tags.each do |tag| %>
-                <span class="px-4 py-1.5 bg-indigo-50 text-indigo-700 rounded-full text-sm font-medium hover:bg-indigo-100 transition-colors duration-200">
+                <span class="px-4 py-1.5 bg-indigo-50 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-full text-sm font-medium hover:bg-indigo-100 dark:hover:bg-indigo-900/70 transition-colors duration-200">
                   <%= tag.name %>
                 </span>
               <% end %>
