@@ -13,7 +13,7 @@ class Place < ApplicationRecord
   private
 
   def calculate_time_between_venue_and_place
-    if name_changed? || address_changed?
+    if saved_change_to_name? || saved_change_to_address?
       CalculateTimeBetweenVenueAndPlaceJob.perform_later(self.id)
     end
   end
