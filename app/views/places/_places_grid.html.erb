@@ -10,45 +10,59 @@
   <div data-drawer-target="backdrop" class="fixed inset-0 bg-gray-900/50 hidden" data-action="click->drawer#close"></div>
 
   <%# Drawer %>
-  <div data-drawer-target="drawer" class="fixed inset-y-0 left-0 w-80 bg-white dark:bg-gray-800 shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto">
-    <div class="p-6">
-      <div class="flex justify-between items-center mb-6">
-        <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Filters</h2>
-        <button type="button" data-action="drawer#close" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
+  <div data-drawer-target="drawer" class="fixed inset-y-0 left-0 w-80 bg-white dark:bg-gray-800 shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+    <%= form_tag places_path, method: :get, data: { turbo_frame: "places_grid", turbo_action: "advance" }, class: "flex flex-col h-full" do %>
+      <div class="p-6 flex-shrink-0">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Filters</h2>
+          <button type="button" data-action="drawer#close" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="flex-1 overflow-y-auto px-6">
+        <div class="mb-8">
+          <h3 class="text-lg font-semibold mb-4 text-gray-700 dark:text-gray-300">Walking Distance</h3>
+          <div class="flex flex-col gap-3">
+            <label class="flex items-center">
+              <input type="radio" name="walking_time" value="" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 dark:border-gray-600" <%= 'checked' if @selected_walking_time.nil? %>>
+              <span class="ml-3 text-gray-700 dark:text-gray-300">Any Distance</span>
+            </label>
+            <% ['10', '20', '30'].each do |minutes| %>
+              <label class="flex items-center">
+                <input type="radio" name="walking_time" value="<%= minutes %>" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 dark:border-gray-600" <%= 'checked' if @selected_walking_time == minutes %>>
+                <span class="ml-3 text-gray-700 dark:text-gray-300">Within <%= minutes %> minutes</span>
+              </label>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-lg font-semibold mb-4 text-gray-700 dark:text-gray-300">Tags</h3>
+          <div class="flex flex-col gap-3">
+            <label class="flex items-center">
+              <input type="radio" name="tag_name" value="" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 dark:border-gray-600" <%= 'checked' if @selected_tag_name.nil? %>>
+              <span class="ml-3 text-gray-700 dark:text-gray-300">All (<%= Place.all.count %>)</span>
+            </label>
+            <% @tags.each do |tag| %>
+              <label class="flex items-center">
+                <input type="radio" name="tag_name" value="<%= tag.name %>" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 dark:border-gray-600" <%= 'checked' if @selected_tag_name == tag.name %>>
+                <span class="ml-3 text-gray-700 dark:text-gray-300"><%= tag.name %> (<%= tag.places_count %>)</span>
+              </label>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800">
+        <button type="submit" class="w-full px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
+          Apply Filters
         </button>
       </div>
-
-      <div class="mb-8">
-        <h3 class="text-lg font-semibold mb-4 text-gray-700 dark:text-gray-300">Walking Distance</h3>
-        <div class="flex flex-col gap-2">
-          <%= link_to places_path(tag_name: @selected_tag_name), class: "px-4 py-2 rounded-lg text-sm font-medium #{@selected_walking_time.nil? ? 'bg-indigo-600 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'}", data: { turbo_frame: "places_grid", turbo_action: "advance" } do %>
-            Any Distance
-          <% end %>
-          <% ['10', '20', '30'].each do |minutes| %>
-            <%= link_to places_path(tag_name: @selected_tag_name, walking_time: minutes), class: "px-4 py-2 rounded-lg text-sm font-medium #{@selected_walking_time == minutes ? 'bg-indigo-600 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'}", data: { turbo_frame: "places_grid", turbo_action: "advance" } do %>
-              Within <%= minutes %> minutes
-            <% end %>
-          <% end %>
-        </div>
-      </div>
-
-      <div class="mb-8">
-        <h3 class="text-lg font-semibold mb-4 text-gray-700 dark:text-gray-300">Tags</h3>
-        <div class="flex flex-col gap-2">
-          <%= link_to places_path, class: "px-4 py-2 rounded-lg text-sm font-medium #{@selected_tag_name.nil? ? 'bg-indigo-600 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'}", data: { turbo_frame: "places_grid", turbo_action: "advance" } do %>
-            All (<%= Place.all.count %>)
-          <% end %>
-          <% @tags.each do |tag| %>
-            <%= link_to places_path(tag_name: tag.name, walking_time: params[:walking_time]), class: "px-4 py-2 rounded-lg text-sm font-medium #{@selected_tag_name == tag.name ? 'bg-indigo-600 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'}", data: { turbo_frame: "places_grid", turbo_action: "advance" } do %>
-              <%= tag.name %> (<%= tag.places_count %>)
-            <% end %>
-          <% end %>
-        </div>
-      </div>
-    </div>
+    <% end %>
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
