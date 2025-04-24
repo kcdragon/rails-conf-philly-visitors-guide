@@ -9,7 +9,7 @@ export default class extends Controller {
 
   async connect() {
     const { Map } = await google.maps.importLibrary("maps");
-    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+    const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary("marker");
 
     const { lat, lng, title } = this.centerPositionValue;
 
@@ -25,14 +25,21 @@ export default class extends Controller {
       title,
     });
 
-    this.markersValue.forEach((marker) => {      
+    this.markersValue.forEach((marker, index) => {      
       let { lat, lng, title } = marker;
       lat = parseFloat(lat);
       lng = parseFloat(lng);
+
+      const pinTextGlyph = new PinElement({
+        glyph: (index + 1).toString(),
+        glyphColor: "white",
+      });
+
       new AdvancedMarkerElement({
         map: this.map,
         position: { lat, lng },
         title,
+        content: pinTextGlyph.element,
       });
     });
   }
