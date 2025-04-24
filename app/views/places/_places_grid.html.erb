@@ -28,13 +28,17 @@
           <h3 class="text-lg font-semibold mb-4 text-gray-700 dark:text-gray-300">Walking Distance</h3>
           <div class="flex flex-col gap-3">
             <label class="flex items-center">
-              <input type="radio" name="walking_time" value="" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 dark:border-gray-600" <%= 'checked' if @selected_walking_time.nil? %>>
-              <span class="ml-3 text-gray-700 dark:text-gray-300">Any Distance</span>
+              <input type="radio" name="walking_time" value="" class="sr-only peer" <%= 'checked' if @selected_walking_time.nil? %>>
+              <span class="w-full px-4 py-2 rounded-lg text-sm font-medium peer-checked:bg-indigo-600 peer-checked:text-white bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 cursor-pointer">
+                Any Distance
+              </span>
             </label>
             <% ['10', '20', '30'].each do |minutes| %>
               <label class="flex items-center">
-                <input type="radio" name="walking_time" value="<%= minutes %>" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 dark:border-gray-600" <%= 'checked' if @selected_walking_time == minutes %>>
-                <span class="ml-3 text-gray-700 dark:text-gray-300">Within <%= minutes %> minutes</span>
+                <input type="radio" name="walking_time" value="<%= minutes %>" class="sr-only peer" <%= 'checked' if @selected_walking_time == minutes %>>
+                <span class="w-full px-4 py-2 rounded-lg text-sm font-medium peer-checked:bg-indigo-600 peer-checked:text-white bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 cursor-pointer">
+                  Within <%= minutes %> minutes
+                </span>
               </label>
             <% end %>
           </div>
@@ -42,15 +46,17 @@
 
         <div class="mb-8">
           <h3 class="text-lg font-semibold mb-4 text-gray-700 dark:text-gray-300">Tags</h3>
-          <div class="flex flex-col gap-3">
-            <label class="flex items-center">
-              <input type="radio" name="tag_name" value="" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 dark:border-gray-600" <%= 'checked' if @selected_tag_name.nil? %>>
-              <span class="ml-3 text-gray-700 dark:text-gray-300">All (<%= Place.all.count %>)</span>
+          <div class="flex flex-wrap gap-2">
+            <label class="">
+              <input type="radio" name="tag_name" value="" class="sr-only peer" <%= 'checked' if @selected_tag_name.nil? %>>
+              <span class="block w-full px-4 py-2 rounded-lg text-sm font-medium peer-checked:bg-indigo-600 peer-checked:text-white bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 cursor-pointer text-center whitespace-nowrap">
+                All (<%= Place.all.count %>)
+              </span>
             </label>
             <% @tags.each do |tag| %>
-              <label class="flex items-center">
-                <input type="radio" name="tag_name" value="<%= tag.name %>" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 dark:border-gray-600" <%= 'checked' if @selected_tag_name == tag.name %>>
-                <span class="ml-3 text-gray-700 dark:text-gray-300"><%= tag.name %> (<%= tag.places_count %>)</span>
+              <label class="">
+                <input type="radio" name="tag_name" value="<%= tag.name %>" class="sr-only peer" <%= 'checked' if @selected_tag_name == tag.name %>>
+                <span class="block w-full px-4 py-2 rounded-lg text-sm font-medium peer-checked:bg-indigo-600 peer-checked:text-white bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 cursor-pointer text-center whitespace-nowrap"><%= tag.name %> (<%= tag.places_count %>)</span>
               </label>
             <% end %>
           </div>
