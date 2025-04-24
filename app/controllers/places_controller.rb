@@ -13,10 +13,8 @@ class PlacesController < ApplicationController
     if walking_time.present?
       max_seconds =
         case walking_time
-        when "10"
-          10 * 60
-        when "20"
-          20 * 60
+        when "15"
+          15 * 60
         when "30"
           30 * 60
         end
