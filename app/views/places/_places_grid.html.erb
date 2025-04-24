@@ -1,4 +1,4 @@
-<div class="container mx-auto px-4 py-12" data-controller="drawer">
+<div class="container mx-auto px-4 py-12" data-controller="drawer map" data-map-center-position-value="<%= { lat: Venue.latitude, lng: Venue.longitude, title: Venue.name }.to_json %>" data-map-markers-value="<%= @places.map { |place| { lat: place.latitude, lng: place.longitude, title: place.name } }.to_json %>">
   <div class="flex justify-between items-center mb-8">
     <h1 class="text-4xl font-bold text-gray-800 dark:text-gray-100">Restaurants</h1>
     <button type="button" data-action="drawer#toggle" class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
@@ -10,7 +10,7 @@
   <div data-drawer-target="backdrop" class="fixed inset-0 bg-gray-900/50 hidden" data-action="click->drawer#close"></div>
 
   <%# Drawer %>
-  <div data-drawer-target="drawer" class="fixed inset-y-0 left-0 w-80 bg-white dark:bg-gray-800 shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+  <div data-drawer-target="drawer" class="fixed inset-y-0 left-0 w-80 bg-white dark:bg-gray-800 shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col z-10">
     <%= form_tag places_path, method: :get, data: { turbo_frame: "places_grid", turbo_action: "advance" }, class: "flex flex-col h-full" do %>
       <div class="p-6 flex-shrink-0">
         <div class="flex justify-between items-center mb-6">
@@ -70,6 +70,8 @@
       </div>
     <% end %>
   </div>
+
+  <div data-map-target="map" class="h-96"></div>
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     <% @places.each do |place| %>

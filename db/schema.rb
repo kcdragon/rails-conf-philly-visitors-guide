@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_04_14_061431) do
+ActiveRecord::Schema[8.0].define(version: 2025_04_24_023326) do
   create_table "place_tags", force: :cascade do |t|
     t.integer "place_id", null: false
     t.integer "tag_id", null: false
@@ -28,6 +28,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_14_061431) do
     t.datetime "updated_at", null: false
     t.string "address"
     t.integer "walking_time_in_seconds"
+    t.decimal "latitude", precision: 10, scale: 6
+    t.decimal "longitude", precision: 10, scale: 6
   end
 
   create_table "tags", force: :cascade do |t|
