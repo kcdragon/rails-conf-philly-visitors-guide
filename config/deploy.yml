@@ -2,12 +2,12 @@
 service: rails_conf_philly_visitors_guide
 
 # Name of the container image.
-image: your-user/rails_conf_philly_visitors_guide
+image: kcdragon/rails_conf_philly_visitors_guide # https://hub.docker.com/repository/docker/kcdragon/rails_conf_philly_visitors_guide/general
 
 # Deploy to these servers.
 servers:
   web:
-    - 192.168.0.1
+    - 192.241.128.79 # https://cloud.digitalocean.com/droplets/491430511/graphs?i=362a06&period=hour
   # job:
   #   hosts:
   #     - 192.168.0.1
@@ -19,13 +19,13 @@ servers:
 # Note: If using Cloudflare, set encryption mode in SSL/TLS setting to "Full" to enable CF-to-app encryption.
 proxy:
   ssl: true
-  host: app.example.com
+  host: railsconf.rowhomelabs.com # porkbun DNS
 
 # Credentials for your image host.
 registry:
   # Specify the registry server, if you're not using Docker Hub
   # server: registry.digitalocean.com / ghcr.io / ...
-  username: your-user
+  username: kcdragon
 
   # Always use an access token rather than real password when possible.
   password:
@@ -76,6 +76,7 @@ asset_path: /rails/public/assets
 # Configure the image builder.
 builder:
   arch: amd64
+  remote: ssh://root@192.241.128.79 # use a remote builder because the local machine is arm64 and having trouble building tailwind assets
 
   # # Build image via remote server (useful for faster amd64 builds on arm64 computers)
   # remote: ssh://docker@docker-builder-server
