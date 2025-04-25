@@ -19,24 +19,30 @@ export default class extends Controller {
     this.darkIconTarget.classList.toggle('hidden')
     this.lightIconTarget.classList.toggle('hidden')
 
+    let theme = null;
+
     // If set via local storage previously
     if (localStorage.getItem('color-theme')) {
       if (localStorage.getItem('color-theme') === 'light') {
         document.documentElement.classList.add('dark')
-        localStorage.setItem('color-theme', 'dark')
+        theme = "dark"
       } else {
         document.documentElement.classList.remove('dark')
-        localStorage.setItem('color-theme', 'light')
+        theme = "light"
       }
     } else {
       if (document.documentElement.classList.contains('dark')) {
         document.documentElement.classList.remove('dark')
-        localStorage.setItem('color-theme', 'light')
+        theme = "light"
       } else {
         document.documentElement.classList.add('dark')
-        localStorage.setItem('color-theme', 'dark')
+        theme = "dark"
       }
     }
+
+    localStorage.setItem('color-theme', theme)
+
+    this.dispatch("toggle", { detail: { theme } })
   }
 
   showDarkIcon() {

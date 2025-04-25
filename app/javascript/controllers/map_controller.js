@@ -8,15 +8,31 @@ export default class extends Controller {
   }
 
   async connect() {
-    const { Map } = await google.maps.importLibrary("maps");
+    this.draw({ detail: { theme: localStorage.getItem("color-theme") || "system" } })
+  }
+
+  async draw({ detail: { theme } }) {
+    console.log("draw", theme)
+
     const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary("marker");
+    const { ColorScheme } = await google.maps.importLibrary("core")
 
     const { lat, lng, title } = this.centerPositionValue;
+
+    let colorScheme = null;
+    if (theme === "system") {
+      colorScheme = ColorScheme.SYSTEM
+    } else if (theme === "light") {
+      colorScheme = ColorScheme.LIGHT
+    } else if (theme === "dark") {
+      colorScheme = ColorScheme.DARK
+    }
 
     this.map = new google.maps.Map(this.mapTarget, {
       zoom: 15, // "street" level zoom
       center: { lat, lng },
-      mapId: "map",
+      mapId: "a38d828481050665", // https://console.cloud.google.com/google/maps-apis/studio/maps/a38d828481050665?project=railsconfphillyvisitorsguide
+      colorScheme,
     });
 
     new AdvancedMarkerElement({
