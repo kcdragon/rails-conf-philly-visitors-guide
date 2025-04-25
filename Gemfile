@@ -41,8 +41,8 @@ gem "thruster", require: false
 # gem "image_processing", "~> 1.2"
 
 # Tailwind CSS for Styling
-gem "tailwindcss-ruby", "~> 4.1"
-gem "tailwindcss-rails", "~> 4.2"
+# Downgraded to 3.3.1 due to https://github.com/rails/tailwindcss-rails/issues/509
+gem "tailwindcss-rails", "~> 3.3.1"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -60,7 +60,7 @@ group :development do
   gem "web-console"
 
   # ERB Linting
-  gem 'erb_lint', '0.6.0', require: false
+  gem "erb_lint", "0.6.0", require: false
 end
 
 group :test do
