@@ -60,7 +60,7 @@ group :development do
   gem "web-console"
 
   # ERB Linting
-  gem "erb_lint", "0.6.0", require: false
+  gem "erb_lint", "0.9.0", require: false
 end
 
 group :test do
