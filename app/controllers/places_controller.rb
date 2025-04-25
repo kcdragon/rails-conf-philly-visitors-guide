@@ -1,6 +1,6 @@
 class PlacesController < ApplicationController
   def index
-    @places = Place.all.order(:name)
+    @places = Place.all.order(walking_time_in_seconds: :asc)
     @tags = Tag.where("places_count > ?", 0).order(places_count: :desc)
 
     tag_name = params[:tag_name]
