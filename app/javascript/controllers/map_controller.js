@@ -41,12 +41,22 @@ export default class extends Controller {
       glyph: glyphImg,
     });
 
-    new AdvancedMarkerElement({
+    const centerMarker = new AdvancedMarkerElement({
       map: this.map,
       position: { lat, lng },
       content: glyphSvgPinElement.element,
       title,
     });
+
+    const infoWindow = new google.maps.InfoWindow({});
+
+    centerMarker.addListener("click", () => {
+      infoWindow.close();
+      infoWindow.setContent(title);
+      infoWindow.open(this.map, centerMarker);
+    });
+
+    const markers = [];
 
     this.markersValue.forEach((marker, index) => {      
       let { lat, lng, title } = marker;
@@ -58,11 +68,19 @@ export default class extends Controller {
         glyphColor: "white",
       });
 
-      new AdvancedMarkerElement({
-        map: this.map,
-        position: { lat, lng },
-        title,
-        content: pinTextGlyph.element,
+      markers.push(
+        new AdvancedMarkerElement({
+          map: this.map,
+          position: { lat, lng },
+          title,
+          content: pinTextGlyph.element,
+        })
+      );
+
+      markers[index].addListener("click", () => {
+        infoWindow.close();
+        infoWindow.setContent(title);
+        infoWindow.open(this.map, markers[index]);
       });
     });
   }
