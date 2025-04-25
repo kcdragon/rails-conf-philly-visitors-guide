@@ -4,6 +4,7 @@ export default class extends Controller {
   static targets = ["map"]
   static values = {
     centerPosition: Object,
+    centerPositionImageUrl: String,
     markers: Array,
   }
 
@@ -12,8 +13,6 @@ export default class extends Controller {
   }
 
   async draw({ detail: { theme } }) {
-    console.log("draw", theme)
-
     const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary("marker");
     const { ColorScheme } = await google.maps.importLibrary("core")
 
@@ -35,9 +34,17 @@ export default class extends Controller {
       colorScheme,
     });
 
+    const glyphImg = document.createElement("img");
+    glyphImg.src = this.centerPositionImageUrlValue;
+    const glyphSvgPinElement = new PinElement({
+      scale: 1.5,
+      glyph: glyphImg,
+    });
+
     new AdvancedMarkerElement({
       map: this.map,
       position: { lat, lng },
+      content: glyphSvgPinElement.element,
       title,
     });
 
