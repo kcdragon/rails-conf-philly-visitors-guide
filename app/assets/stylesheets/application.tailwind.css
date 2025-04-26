@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-
 @layer components {
-  .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
+  .dark .gm-style .gm-style-iw-d::-webkit-scrollbar-track, 
+  .dark .gm-style .gm-style-iw-d::-webkit-scrollbar-track-piece,
+  .dark .gm-style .gm-style-iw-c,
+  .dark .gm-style .gm-style-iw-t::after { 
+    @apply bg-gray-800;
+    @apply text-white;
   }
 }
-
-*/
