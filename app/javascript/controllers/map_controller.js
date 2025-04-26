@@ -59,7 +59,7 @@ export default class extends Controller {
     const markers = [];
 
     this.markersValue.forEach((marker, index) => {      
-      let { lat, lng, title } = marker;
+      let { lat, lng, title, tags } = marker;
       lat = parseFloat(lat);
       lng = parseFloat(lng);
 
@@ -79,7 +79,18 @@ export default class extends Controller {
 
       markers[index].addListener("click", () => {
         infoWindow.close();
-        infoWindow.setContent(title);
+        infoWindow.setContent(`
+          <div class="flex flex-col gap-2">
+            <div class="text-gray-800 dark:text-gray-100 text-lg font-semibold mb-2">${title}</div>
+            <div class="flex flex-wrap gap-2">
+              ${tags.map(tag => `
+                <span class="px-3 py-1 text-sm font-medium rounded-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300">
+                  ${tag}
+                </span>
+              `).join('')}
+            </div>
+          </div>
+        `);
         infoWindow.open(this.map, markers[index]);
       });
     });
