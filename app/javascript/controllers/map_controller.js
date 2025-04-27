@@ -27,6 +27,10 @@ export default class extends Controller {
       colorScheme = ColorScheme.DARK
     }
 
+    if (!this.hasMapTarget) {
+      return;
+    }
+
     this.map = new google.maps.Map(this.mapTarget, {
       zoom: 15, // "street" level zoom
       center: { lat, lng },
