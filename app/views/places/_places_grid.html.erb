@@ -25,6 +25,33 @@
     </div>
   </div>
 
+  <%# Active Filters %>
+  <% if @selected_tag_name.present? || @selected_walking_time.present? %>
+    <div class="mt-4 flex flex-wrap gap-2">
+      <% if @selected_tag_name.present? %>
+        <div class="flex items-center gap-2 px-3 py-1.5 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-full text-sm">
+          <span>Tag: <%= @selected_tag_name %></span>
+          <%= link_to places_path(view: @view, walking_time: @selected_walking_time), class: "hover:text-indigo-900 dark:hover:text-indigo-100" do %>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          <% end %>
+        </div>
+      <% end %>
+
+      <% if @selected_walking_time.present? %>
+        <div class="flex items-center gap-2 px-3 py-1.5 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-full text-sm">
+          <span>Within <%= @selected_walking_time %> minutes</span>
+          <%= link_to places_path(view: @view, tag_name: @selected_tag_name), class: "hover:text-indigo-900 dark:hover:text-indigo-100" do %>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
   <%# Backdrop %>
   <div data-drawer-target="backdrop" class="fixed inset-0 bg-gray-900/50 hidden z-20" data-action="click->drawer#close"></div>
 
