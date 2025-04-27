@@ -77,9 +77,19 @@
     <% @places.each_with_index do |place, index| %>
       <%= link_to place_path(place.id), class: "block h-full", data: { turbo_frame: "_top" } do %>
         <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden h-full">
-          <div class="p-6 flex flex-col h-full">
-            <h2 class="text-2xl font-semibold mb-3 text-gray-800 dark:text-gray-100"><%= index + 1 %>. <%= place.name %></h2>
-            <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed flex-grow"><%= place.description %></p>
+          <div class="p-6 flex flex-col gap-3 h-full">
+            <h2 class="text-2xl font-semibold text-gray-800 dark:text-gray-100"><%= index + 1 %>. <%= place.name %></h2>
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed"><%= place.description %></p>
+            <% if place.walking_time_in_seconds.present? %>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600 dark:text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M13 5.5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zM7.525 8.646a6.5 6.5 0 00-1.525 4.104v2.25h8v-2.25a6.5 6.5 0 00-1.525-4.104l-1.475 1.475V12h-2V10.12L7.525 8.646zM10 18a1 1 0 01-1-1h2a1 1 0 01-1 1z" />
+                </svg>
+                <span class="text-gray-600 dark:text-gray-400">
+                  <%= (place.walking_time_in_seconds / 60.0).ceil %> minute walk from conference
+                </span>
+              </div>
+            <% end %>
             <div class="flex flex-wrap gap-2">
               <% place.tags.each do |tag| %>
                 <span class="px-4 py-1.5 bg-indigo-50 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-full text-sm font-medium hover:bg-indigo-100 dark:hover:bg-indigo-900/70 transition-colors duration-200">
