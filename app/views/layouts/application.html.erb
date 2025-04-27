@@ -33,6 +33,16 @@
   </head>
 
   <body class="h-full bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <nav class="bg-white dark:bg-gray-800 shadow-sm">
+      <div class="container mx-auto px-5">
+        <div class="flex items-center h-16">
+          <%= link_to root_path, class: "flex items-center gap-2 text-red-800 dark:text-red-300 hover:text-red-600 dark:hover:text-red-200" do %>
+            <%= image_tag "ruby.svg", class: "w-8 h-8" %>
+          <% end %>
+        </div>
+      </div>
+    </nav>
+
     <div data-controller="theme" class="fixed bottom-4 left-4">
       <button type="button" data-action="click->theme#toggle:prevent" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
         <svg data-theme-target="darkIcon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
