@@ -59,7 +59,7 @@ export default class extends Controller {
     const markers = [];
 
     this.markersValue.forEach((marker, index) => {      
-      let { lat, lng, title, tags } = marker;
+      let { lat, lng, title, tags, path } = marker;
       lat = parseFloat(lat);
       lng = parseFloat(lng);
 
@@ -88,6 +88,11 @@ export default class extends Controller {
                   ${tag}
                 </span>
               `).join('')}
+            </div>
+            <div class="mt-2">
+              <a href="${path}" class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors inline-block text-sm" data-turbo-frame="_top">
+                View Details
+              </a>
             </div>
           </div>
         `);
