@@ -1,5 +1,5 @@
-<div class="<%= @view == 'map' ? 'h-screen flex flex-col' : 'container mx-auto px-4 py-12' %>" data-controller="drawer map" data-action="theme:toggle@window->map#draw" data-map-center-position-value="<%= { lat: Venue.latitude, lng: Venue.longitude, title: Venue.name }.to_json %>" data-map-markers-value="<%= @places.map { |place| { lat: place.latitude, lng: place.longitude, title: place.name, tags: place.tags.map(&:name), path: place_path(place.id) } }.to_json %>" data-map-center-position-image-url-value="<%= image_url('rails-conf-logo-map-marker.svg') %>">
-  <div class="<%= @view == 'map' ? 'px-4 py-4' : '' %> flex justify-between items-center mb-8">
+<div class="h-screen flex flex-col" data-controller="drawer map" data-action="theme:toggle@window->map#draw" data-map-center-position-value="<%= { lat: Venue.latitude, lng: Venue.longitude, title: Venue.name }.to_json %>" data-map-markers-value="<%= @places.map { |place| { lat: place.latitude, lng: place.longitude, title: place.name, tags: place.tags.map(&:name), path: place_path(place.id) } }.to_json %>" data-map-center-position-image-url-value="<%= image_url('rails-conf-logo-map-marker.svg') %>">
+  <div class="flex gap-4 justify-between items-center">
     <h1 class="text-4xl font-bold text-gray-800 dark:text-gray-100">Restaurants</h1>
     <div class="flex gap-4">
       <%# View Toggle Button %>
@@ -97,12 +97,12 @@
 
   <%# Map View %>
   <% if @view == 'map' %>
-    <div data-map-target="map" class="flex-1 relative z-10"></div>
+    <div data-map-target="map" class="flex-1 relative z-10 mt-8"></div>
   <% end %>
 
   <%# List View %>
   <% if @view == 'list' %>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
       <% @places.each_with_index do |place, index| %>
         <%= link_to place_path(place.id), class: "block h-full", data: { turbo_frame: "_top" } do %>
           <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden h-full">
