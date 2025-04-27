@@ -1,5 +1,5 @@
 <div class="h-[calc(100vh-theme(spacing.32))] flex flex-col" data-controller="drawer map" data-action="theme:toggle@window->map#draw" data-map-center-position-value="<%= { lat: Venue.latitude, lng: Venue.longitude, title: Venue.name }.to_json %>" data-map-markers-value="<%= @places.map { |place| { lat: place.latitude, lng: place.longitude, title: place.name, tags: place.tags.map(&:name), path: place_path(place.id) } }.to_json %>" data-map-center-position-image-url-value="<%= image_url('rails-conf-logo-map-marker.svg') %>">
-  <div class="flex flex-grow-0 gap-4 justify-between items-center">
+  <div class="flex flex-col md:flex-row flex-grow-0 gap-4 justify-between md:items-center">
     <h1 class="text-4xl font-bold text-gray-800 dark:text-gray-100">Restaurants</h1>
     <div class="flex gap-4">
       <%# View Toggle Button %>
