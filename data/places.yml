@@ -4,7 +4,7 @@ places:
     address: 1776 Benjamin Franklin Pkwy, Philadelphia, PA 19103
     description: Cake donuts and fried chicken.
     tags: ["breakfast", "lunch", "takeout"]
-    slug: federal-donuts
+    slug: federal-donuts-logan-square
   - name: Pizzeria Vetri
     address: 1939 Callowhill St, Philadelphia, PA 19130
     description: Pizza from a popular Philly chef.
@@ -36,7 +36,7 @@ places:
     address: 1909 Sansom St, Philadelphia, PA 19103
     description: Popular chain known for donuts and fried chicken
     tags: ["breakfast", "lunch"]
-    slug: federal-donuts
+    slug: federal-donuts-rittenhouse
   - name: Parc
     address: 1700 Locust St, Philadelphia, PA 19103
     description: French bistro overlooking Rittenhouse Square
@@ -75,7 +75,7 @@ places:
     slug: sampan
   - name: High Street Philly
     description: Bakery and restaurant known for artisanal breads
-    tags: ["bakery", "sandwiches", "breakfast", "lunch"]
+    tags: ["breakfast", "lunch"]
     slug: high-street-philly
 
   # Market East
@@ -89,10 +89,10 @@ places:
   - name: Zahav
     slug: zahav
     description: Award-winning Israeli restaurant featuring modern takes on traditional dishes. It's tough to get a reservation here.
-    tags: ["israeli", "dinner"]
+    tags: ["israeli", "mediterranean", "dinner"]
   - name: Han Dynasty
     description: Szechuan Chinese restaurant chain known for spicy dishes
-    tags: ["chinese", "szechuan", "lunch", "dinner"]
+    tags: ["chinese", "lunch", "dinner"]
     slug: han-dynasty
   - name: Morimoto
     description: High-end Japanese restaurant from Iron Chef Morimoto
@@ -111,17 +111,17 @@ places:
     slug: genos-steaks
   - name: Angelo's Pizzeria
     description: Popular shop for pizza, cheesesteaks and hoagies. This place is busy. Especially on weekends.
-    tags: ["pizza", "cheesesteaks", "sandwiches", "lunch", "dinner", "takeout"]
+    tags: ["pizza", "cheesesteaks", "lunch", "takeout"]
     slug: angelos-pizzeria
 
   # Fishtown
   - name: Suraya
     description: All-day Lebanese cafe, restaurant and market
-    tags: ["lebanese", "cafe", "breakfast", "lunch", "dinner"]
+    tags: ["lebanese", "breakfast", "lunch", "dinner"]
     slug: suraya
   - name: Pizzeria Beddia
     description: Acclaimed pizzeria with creative toppings
-    tags: ["pizza", "modern", "dinner"]
+    tags: ["pizza", "lunch", "dinner"]
     slug: pizzeria-beddia
   
   # Point Breeze
@@ -133,7 +133,7 @@ places:
   # East Passyunk
   - name: Victor Cafe
     description: Italian restaurant where servers perform opera
-    tags: ["italian", "entertainment", "dinner"]
+    tags: ["italian", "dinner"]
     slug: victor-cafe
     
   # Callowhill

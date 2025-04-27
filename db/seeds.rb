@@ -8,7 +8,23 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-YAML.load_file(Rails.root.join("data", "places.yml"))["places"].map do |place_yaml|
+place_data_list = YAML.load_file(Rails.root.join("data", "places.yml"))["places"]
+
+duplicate_slugs = place_data_list.group_by { |place| place['slug'] }.select { |slug, places| places.size > 1 }
+if duplicate_slugs.any?
+  raise "Duplicate slug found in places.yml: #{duplicate_slugs.inspect}"
+end
+
+missing_slugs = place_data_list.select { |place| place['slug'].blank? }
+if missing_slugs.any?
+  raise "Missing slug in places.yml: #{missing_slugs.inspect}"
+end
+
+slugs = place_data_list.map { |place| place['slug'] }
+places_removed_from_yaml_file = Place.where.not(slug: slugs)
+places_removed_from_yaml_file.destroy_all
+
+place_data_list.map do |place_yaml|
   slug = place_yaml['slug']
   place = Place.find_or_initialize_by(slug: slug)
   place.name = place_yaml['name']
@@ -20,7 +36,7 @@ YAML.load_file(Rails.root.join("data", "places.yml"))["places"].map do |place_ya
   tags = tag_names.map do |tag_name|
     Tag.find_or_create_by!(name: tag_name)
   end
-  
+
   tags.each do |tag|
     PlaceTag.find_or_create_by!(place: place, tag: tag)
   end
