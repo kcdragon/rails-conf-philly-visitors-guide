@@ -7,10 +7,10 @@
   </div>
 
   <%# Backdrop %>
-  <div data-drawer-target="backdrop" class="fixed inset-0 bg-gray-900/50 hidden" data-action="click->drawer#close"></div>
+  <div data-drawer-target="backdrop" class="fixed inset-0 bg-gray-900/50 hidden z-20" data-action="click->drawer#close"></div>
 
   <%# Drawer %>
-  <div data-drawer-target="drawer" class="fixed inset-y-0 left-0 w-80 bg-white dark:bg-gray-800 shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col z-10">
+  <div data-drawer-target="drawer" class="fixed inset-y-0 left-0 w-80 bg-white dark:bg-gray-800 shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col z-30">
     <%= form_tag places_path, method: :get, data: { turbo_frame: "places_grid", turbo_action: "advance" }, class: "flex flex-col h-full" do %>
       <div class="p-6 flex-shrink-0">
         <div class="flex justify-between items-center mb-6">
@@ -71,7 +71,7 @@
     <% end %>
   </div>
 
-  <div data-map-target="map" class="h-96"></div>
+  <div data-map-target="map" class="h-96 relative z-10"></div>
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     <% @places.each_with_index do |place, index| %>
