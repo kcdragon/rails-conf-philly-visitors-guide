@@ -2,18 +2,18 @@ places:
   # Logan Square
   - name: Federal Donuts
     address: 1776 Benjamin Franklin Pkwy, Philadelphia, PA 19103
-    description: Cake donuts and fried chicken.
+    description: Popular counter-serve outpost specializing in Korean-style fried chicken, creative donuts & coffee.
     tags: ["breakfast", "lunch", "takeout"]
     slug: federal-donuts-logan-square
   - name: Pizzeria Vetri
     address: 1939 Callowhill St, Philadelphia, PA 19130
-    description: Pizza from a popular Philly chef.
+    description: Relaxed destination with a contemporary vibe serving Neapolitan pizzas, plus calzones & salads.
     tags: ["pizza", "lunch", "dinner"]
-    slug: pizzeria-vetri
+    slug: pizzeria-vetri-callowhill
   - name: Buena Onda
     address: 1901 Callowhill St, Philadelphia, PA 19130
-    description: Quick service Mexican restaurant.
-    tags: ["mexican", "lunch", "dinner", "takeout"]
+    description: Jose Garces serves tacos, quesadillas & margaritas at this taqueria inspired by the Baja Peninsula.
+    tags: ["mexican", "lunch", "dinner"]
     slug: buena-onda
   - name: Tandoori Pizza
     address: 2001 Hamilton St, Philadelphia, PA 19130
@@ -22,38 +22,142 @@ places:
     slug: tandoori-pizza
   - name: City Tap House Logan Square
     address: 100 N 18th St, Philadelphia, PA 19103
-    description: Spacious sports bar. I love the pizza here.
-    tags: ["bar", "american", "pizza", "lunch", "dinner"]
+    description: New American pub fare & craft beers in a big, woodsy space with a huge video wall screening games.
+    tags: ["american", "pizza", "lunch", "dinner"]
     slug: city-tap-house-logan-square
   - name: Sabrina's Cafe
     address: 1804 Callowhill St, Philadelphia, PA 19130
-    description: Popular brunch spot. Busy on the weekends.
+    description: Relaxed New American cafe with a devoted following for its breakfast & brunch offerings.
     tags: ["breakfast", "lunch"]
     slug: sabrinas-cafe
+
+  # Fairmount
+  - name: Stockyard Sandwich Co
+    address: 1541 Spring Garden St, Philadelphia, PA 19130
+    description: An all-day, sandwich-centric menu, along with salads & sides at this casual spot.
+    tags: ["sandwiches", "lunch"]
+    slug: stockyard-sandwich-co
 
   # Rittenhouse Square
   - name: Federal Donuts
     address: 1909 Sansom St, Philadelphia, PA 19103
-    description: Popular chain known for donuts and fried chicken
+    description: Popular counter-serve outpost specializing in Korean-style fried chicken, creative donuts & coffee.
     tags: ["breakfast", "lunch"]
     slug: federal-donuts-rittenhouse
   - name: Parc
     address: 1700 Locust St, Philadelphia, PA 19103
-    description: French bistro overlooking Rittenhouse Square
+    description: Traditional bistro fare is served in a bustling setting that reminds of belle epoque Paris.
     tags: ["french", "breakfast", "lunch", "dinner"]
     slug: parc
   - name: DanDan
-    description: Szechuan and Taiwanese restaurant
+    address: 126 S 16th St, Philadelphia, PA 19102
+    description: Contemporary eatery serving dan dan noodles, veggie dishes & spicy Sichuan/Taiwanese specialties.
     tags: ["chinese", "lunch", "dinner"]
     slug: dandan
   - name: K'Far
-    description: Israeli bakery and all-day cafe
+    address: 110 S 19th St, Philadelphia, PA 19103
+    description: Relaxed option serving Israeli-style pastries, small plates & drinks in a polished retro setup.
     tags: ["israeli", "bakery", "breakfast", "lunch"]
     slug: kfar
-  - name: El Merkury
-    description: Central American street food and churros
-    tags: ["central american", "street food", "lunch", "dinner"]
-    slug: el-merkury
+  - name: 1-900-ICE-CREAM
+    address: 119 S 21st St, Philadelphia, PA 19103
+    description: Popular ice cream shop. The line can get long at night.
+    tags: ["dessert"]
+    slug: 1-900-ice-cream
+  - name: Goldie
+    address: 120 S 20th St, Philadelphia, PA 19103
+    description: Vegan lunch spot serving falafel with Dizengoff pita, fries, and tahini shakes in gold-toned digs.
+    tags: ["lunch", "vegan"]
+    slug: goldie-rittenhouse
+  - name: La Colombe
+    address: 130 S 19th St, Philadelphia, PA 19103
+    description: Trendy cafe serving house-brand artisanal coffee, pastries & snacks in a fashionable space.
+    tags: ["coffee"]
+    slug: la-colombe-rittenhouse
+  - name: Cleavers
+    address: 108 S 18th St, Philadelphia, PA 19103
+    description: Counter-service shop serving steak sandwiches, side dishes, shakes, and bottled beer.
+    tags: ["lunch", "dinner", "cheesesteaks"]
+    slug: cleavers
+  - name: Green Eggs Cafe
+    address: 33 S 18th St, Philadelphia, PA 19103
+    description: Breakfast and brunch spot with fancy french toast and pancakes.
+    tags: ["breakfast"]
+    slug: green-eggs-cafe-rittenhouse
+  - name: Gran Caffe L'Aquila
+    address: 1716 Chestnut St, Philadelphia, PA 19103
+    description: Options range from Italian gelato & coffee to house-cured meats & wine at this bi-level multitasker.
+    tags: ["dessert", "italian", "dinner"]
+    slug: gran-caffe-l-aquila
+  - name: Elixr Coffee Roasters
+    address: 1600 Market St, Philadelphia, PA 19103
+    description: Coffee shop.
+    tags: ["coffee"]
+    slug: elixir-coffee-roasters-market-st
+  - name: The Ground Rittenhouse
+    address: 120 S 18th St, Philadelphia, PA 19103
+    description: Coffee shop.
+    tags: ["coffee"]
+    slug: the-ground-rittenhouse
+  - name: The Dandelion
+    address: 124 S 18th St, Philadelphia, PA 19103
+    description: This spot serves craft beers & modern takes on British cuisine in a pubby setting.
+    tags: ["lunch", "dinner", "british"]
+    slug: the-dandelion
+  - name: Dizengoff
+    address: 120 S 18th St, Philadelphia, PA 19103
+    description: Bright, industrial eat-in/take-out spot for varieties of hummus, fresh pita & Middle Eastern salads.
+    tags: ["israeli", "lunch", "dinner"]
+    slug: dizengoff
+  - name: Pizzeria Vetri
+    address: 1615 Chancellor St, Philadelphia, PA 19103
+    description: Relaxed destination with a contemporary vibe serving Neapolitan pizzas, plus calzones & salads.
+    tags: ["pizza", "lunch", "dinner"]
+    slug: pizzeria-vetri-rittenhouse
+  - name: Schlesinger's
+    address: 1521 Locust St, Philadelphia, PA 19102
+    description: Traditional Jewish deli with huge sandwiches, matzo ball soup, a pickle bar & more.
+    tags: ["deli", "lunch", "dinner"]
+    slug: schlesingers
+  - name: The Continental Midtown
+    address: 1801 Chestnut St, Philadelphia, PA 19103
+    description: Martinis & tapas-style dishes for sharing, served in a modern 2-level space with a chic roof deck.
+    tags: ["american", "lunch", "dinner"]
+    slug: the-continental-midtown
+  - name: Giuseppe & Sons
+    address: 1523 Sansom St, Philadelphia, PA 19102
+    description: Moody, dimly-lit Italian restaurant serving red-sauce classics, handmade pasta, seafood & cocktails.
+    tags: ["italian", "dinner"]
+    slug: giuseppe-and-sons
+  - name: Elixr Coffee Roasters
+    address: 207 S Sydenham St, Philadelphia, PA 19102
+    description: Coffee shop.
+    tags: ["coffee"]
+    slug: elixir-coffee-roasters-midtown-sydenham-st
+  - name: Alice Pizza
+    address: 235 S 15th St, Philadelphia, PA 19102
+    description: Corner shop with a variety of pizza al taglio, plus espresso, gelato, and a full bar.
+    tags: ["pizza", "gelato", "lunch", "dinner"]
+    slug: alice-pizza-locust-street
+
+  # Chinatown
+  - name: EMei
+    address: 915 Arch St, Philadelphia, PA 19107
+    description: Authentic Szechuan Chinese restaurant.
+    tags: ["chinese", "lunch", "dinner"]
+    slug: emei
+  - name: Ocean Harbor
+    address: 1023 Race St, Philadelphia, PA 19107
+    description: Bustling Chinese dim sum restaurant where carts provide a wide range of sometimes-adventurous items.
+    tags: ["chinese", "lunch", "dinner"]
+    slug: ocean-harbor
+
+  # Market East
+  - name: Reading Terminal Market
+    address: 1136 Arch St, Philadelphia, PA 19107
+    description: Historic food hall featuring diverse vendors and local specialties
+    tags: ["food hall", "breakfast", "lunch"]
+    slug: reading-terminal-market
 
   # Midtown Village (Gayborhood)
   - name: Middle Child
@@ -77,13 +181,6 @@ places:
     description: Bakery and restaurant known for artisanal breads
     tags: ["breakfast", "lunch"]
     slug: high-street-philly
-
-  # Market East
-  - name: Reading Terminal Market
-    address: 1136 Arch St, Philadelphia, PA 19107
-    description: Historic food hall featuring diverse vendors and local specialties
-    tags: ["food hall", "breakfast", "lunch"]
-    slug: reading-terminal-market
 
   # Old City
   - name: Zahav
