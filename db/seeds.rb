@@ -37,7 +37,10 @@ place_data_list.map do |place_yaml|
     Tag.find_or_create_by!(name: tag_name)
   end
 
-  tags.each do |tag|
-    PlaceTag.find_or_create_by!(place: place, tag: tag)
+  ApplicationRecord.transaction do
+    PlaceTag.where(place: place).destroy_all
+    tags.each do |tag|
+      PlaceTag.create!(place: place, tag: tag)
+    end
   end
 end
