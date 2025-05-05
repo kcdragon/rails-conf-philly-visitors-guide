@@ -42,7 +42,7 @@ gem "thruster", require: false
 
 # Tailwind CSS for Styling
 # Downgraded to 3.3.1 due to https://github.com/rails/tailwindcss-rails/issues/509
-gem "tailwindcss-rails", "~> 3.3.1"
+gem "tailwindcss-rails", "~> 4.2.3"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
