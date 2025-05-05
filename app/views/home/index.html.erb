@@ -5,21 +5,18 @@
   </header>
 
   <div class="grid md:grid-cols-2 gap-8">
-    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+    <%= link_to places_path, class: "bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow block" do %>
       <h2 class="text-2xl font-semibold text-red-700 dark:text-red-300 mb-3">🍽️ Restaurants</h2>
       <p class="text-gray-600 dark:text-gray-300">
         A list of my favorite places to eat in Philadelphia. I've been to all of these and would recommend them.
       </p>
-      <%= link_to "Explore Restaurants", places_path, class: "text-red-600 hover:text-red-800 dark:text-red-400 dark:hover:text-red-300 mt-2 inline-block" %>
-    </div>
+    <% end %>
 
-    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+    <%= link_to transit_path, class: "bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow block" do %>
       <h2 class="text-2xl font-semibold text-red-700 dark:text-red-300 mb-3">🚇 Getting Around</h2>
       <p class="text-gray-600 dark:text-gray-300">
-        Navigate the city with ease using public transit, walking routes,
-        and transportation tips.
+        Tips for getting around the city.
       </p>
-      <%= link_to "Transportation Guide", transit_path, class: "text-red-600 hover:text-red-800 dark:text-red-400 dark:hover:text-red-300 mt-2 inline-block" %>
-    </div>
+    <% end %>
   </div>
 </div>
